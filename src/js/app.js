@@ -11,14 +11,14 @@ window.addEventListener("DOMContentLoaded", () => {
 });
 
 
-fetch (getUrl(10))
+fetch(getUrl(10))
 .then((response)=>response.json)
 .then((data)=>
 {
   data.results.map((x)=>{
     let newLi = document.createElement("li");
-        newLi.innerHTML = result.name;
+        newLi.innerHTML = x.name;
         ul.appendChild(newLi);
   })
 }
-)
+).catch((e)=> console.log(e))
