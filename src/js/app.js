@@ -8,12 +8,12 @@ window.addEventListener("DOMContentLoaded", () => {
   const url = `https://pokeapi.co/api/v2/pokemon?limit=10`;
 
 fetch(url)
-.then((response)=>response.json)
+.then((response)=>response.json())
 .then((data)=>{
   data.results.forEach((x)=>{
     let newLi = document.createElement("li");
-        newLi.innerHTML = x.name;
-        ul.appendChild(newLi);
+      newLi.innerHTML = x.name;
+      ul.appendChild(newLi);
   })
 }
 ).catch((e)=>console.log(e))
