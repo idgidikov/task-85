@@ -9,12 +9,13 @@ window.addEventListener("DOMContentLoaded", () => {
 
 fetch(url)
 .then((response)=>response.json)
-.then((data)=>
-{
-  data.results.map((x)=>{
+.then((data)=>{
+  data.results.forEach((x)=>{
     let newLi = document.createElement("li");
         newLi.innerHTML = x.name;
         ul.appendChild(newLi);
   })
 }
-).catch((e)=> console.log(e))
+).catch((e)=>console.log(e))
+
+})
