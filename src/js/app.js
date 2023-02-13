@@ -5,13 +5,9 @@ window.addEventListener("DOMContentLoaded", () => {
 
   const ul = document.querySelector("ul");
 
-  const getUrl  = (count)=> {
-    return `https://pokeapi.co/api/v2/pokemon?limit=${count}`;
-  }
-});
+  const url = `https://pokeapi.co/api/v2/pokemon?limit=10`;
 
-
-fetch(getUrl(10))
+fetch(url)
 .then((response)=>response.json)
 .then((data)=>
 {
